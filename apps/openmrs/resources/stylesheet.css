@@ -1,0 +1,10 @@
+.patient-view {
+  background-color: #eee;
+  width: 300px;
+  height: 300px;
+},
+
+.relative-view {
+  display: block;
+  position: relative;	
+}

@@ -24,7 +24,11 @@ Openmrs.main = function main() {
 
   // TODO: Set the content property on your primary controller
   // ex: Openmrs.contactsController.set('content',Openmrs.contacts);
-
+	var patients = Openmrs.store.find(Openmrs.Patient);
+	Openmrs.patientsController.set('content', patients);
+	var patient = Openmrs.store.find(Openmrs.Patient, '1');
+	Openmrs.patientController.set('content', patient);
+	
 } ;
 
 function main() { Openmrs.main(); }
