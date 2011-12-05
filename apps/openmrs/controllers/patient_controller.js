@@ -13,7 +13,4 @@
 Openmrs.patientController = SC.ObjectController.create(
 /** @scope Openmrs.patientController.prototype */ {
 
-	
-	
-
 }) ;

@@ -1,10 +1,6 @@
 .patient-view {
   background-color: #eee;
   width: 300px;
-  height: 300px;
-},
-
-.relative-view {
-  display: block;
-  position: relative;	
+  height: 70px;
+  border: 1px solid black !important;
 }

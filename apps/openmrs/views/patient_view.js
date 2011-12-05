@@ -10,32 +10,42 @@
 
   @extends SC.View
 */
-Openmrs.PatientView = SC.View.extend( {
-	childViews: ['patientNameLabel', 'doctorNameLabel', 'loginTimeLabel', 'patientIdLabel', 'patientImage'],
-	classNames: ['patient-view', 'relative-view'],
-	patientNameLabel: SC.LabelView.design({
-	  layout: {top:0, width:200, height: 20},
-	  valueBinding: 'Openmrs.patientController.fullName',
-	  classNames: ['relative-view']
-	}),
-	doctorNameLabel: SC.LabelView.design({
-	  layout: {top:30,width:200},
-	  valueBinding: 'Openmrs.patientController.doctorName',
-	  classNames: ['relative-view']
-	}),
-	loginTimeLabel: SC.LabelView.design({
-	  layout: {top:60,width:200},
-	  valueBinding: 'Openmrs.patientController.loginTime',
-	  classNames: ['relative-view']
-	}),
-	patientIdLabel: SC.LabelView.design({
-	  layout: {top:90,width:200},
-	  valueBinding: 'Openmrs.patientController.id',
-	  classNames: ['relative-view']
-	}),
-	patientImage: SC.ImageView.design({
-	  layout: { top:120,width:200 },
-	  value: 'Class name or URL',
-	  classNames: ['relative-view']
-	})
+Openmrs.PatientView = SC.View.extend(SC.StaticLayout, {
+    childViews: ['patientNameLabel', 'doctorNameLabel', 'loginTimeLabel', 'patientIdLabel'],
+    classNames: ['patient-view'],
+    useStaticLayout: YES,
+    patientNameLabel: SC.LabelView.design({
+        layout: {
+            top: 10,
+            width: 200
+        },
+        valueBinding: 'Openmrs.patientController.fullName'
+    }),
+    doctorNameLabel: SC.LabelView.design({
+        layout: {
+            top: 25,
+            width: 200
+        },
+        valueBinding: 'Openmrs.patientController.doctorName'
+    }),
+    loginTimeLabel: SC.LabelView.design({
+        layout: {
+            top: 40,
+            width: 200
+        },
+        valueBinding: 'Openmrs.patientController.loginTime'
+    }),
+    patientIdLabel: SC.LabelView.design({
+        layout: {
+            top: 55,
+            width: 200
+        },
+        valueBinding: 'Openmrs.patientController.id'
+    }),
+    patientImage: SC.ImageView.design({
+        layout: {
+            width: 200
+        },
+        value: 'Class name or URL'
+    })
 });
